@@ -15,7 +15,6 @@ public class ManagerDanhBa {
     static Validate validate = new Validate();
     static ValidateDate validateDate = new ValidateDate();
     static ValidateEmail validateEmail = new ValidateEmail();
-    static DocGhiFile docGhiFile = new DocGhiFile();
     MenuDanhBa menuDanhBa = new MenuDanhBa();
 
     public void themDanhBa(String DB) {
@@ -68,7 +67,7 @@ public class ManagerDanhBa {
         while (true) {
             email = scanner.nextLine();
             if (!email.isEmpty()) {
-                if (!validate.validateSDT(email)) {
+                if (!validateEmail.validateEmail(email)) {
                     break;
                 } else {
                     System.out.println(">>>>[CHÚ Ý]: Email gồm các ký tự từ 0-9,a-z,@ [ví dụ: thao@gmail.com");

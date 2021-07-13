@@ -7,7 +7,7 @@ public class ValidateEmail {
 
     private static Pattern pattern;
     private Matcher matcher;
-    private static final String Email_REGEX =  "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$";
+    private static final String Email_REGEX =  "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$";
     public ValidateEmail(){
         pattern =Pattern.compile(Email_REGEX);
     }
