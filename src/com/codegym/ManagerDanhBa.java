@@ -67,7 +67,7 @@ public class ManagerDanhBa {
         while (true) {
             email = scanner.nextLine();
             if (!email.isEmpty()) {
-                if (!validateEmail.validateEmail(email)) {
+                if (validateEmail.validateEmail(email)) {
                     break;
                 } else {
                     System.out.println(">>>>[CHÚ Ý]: Email gồm các ký tự từ 0-9,a-z,@ [ví dụ: thao@gmail.com");
@@ -141,7 +141,7 @@ public class ManagerDanhBa {
         while (true) {
             email = scanner.nextLine();
             if (!email.isEmpty()) {
-                if (!validate.validateSDT(email)) {
+                if (validateEmail.validateEmail(email)) {
                     break;
                 } else {
                     System.out.println(">>>>[CHÚ Ý]: Email gồm các ký tự từ 0-9,a-z,@ [ví dụ: thao@gmail.com");
@@ -191,6 +191,7 @@ public class ManagerDanhBa {
                 String check = scanner.nextLine();;
                 if(check == "Y"){
                     list.remove(soDT);
+                    break;
                 }else {
                     menuDanhBa.menu();
                 }
